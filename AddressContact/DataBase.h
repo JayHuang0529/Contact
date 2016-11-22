@@ -10,9 +10,13 @@
 #import "FMDatabase.h"
 static FMDatabase *_DB;
 @interface DataBase : NSObject
+
 + (void)createPeopleDataBase;
 + (void)createTelDataBase;
-+ (NSMutableArray *)selectPeopleBase;
-+ (NSMutableArray *)selectPeopleBaseWithPeopleID:(NSInteger)peopleID;
 
++ (NSMutableArray *)selectPeopleBase;
++ (NSMutableArray *)selectTelBaseWithPeopleID:(NSInteger)peopleID;
+
++ (void)deletePeopleDataBaseWithPeopleID:(NSInteger)peopleID;
++ (void)deleteTelDataBaseWithNum:(NSInteger)num;
 @end
